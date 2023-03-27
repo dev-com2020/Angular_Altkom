@@ -1,0 +1,11 @@
+<h2>Lista produktów</h2>
+<ul>
+    <li (click)="selectedProduct = 'Kurs Angular'">Angular</li>
+    <li (click)="selectedProduct = 'Kurs React'">React</li>
+    <li (click)="selectedProduct = 'Kurs C++'">C++</li>  
+</ul>
+<app-product-detail
+#product 
+[name]="selectedProduct" 
+(bought)="onBuy($event)"></app-product-detail>
+<!-- <br><span>{{ product.name }}</span> -->
